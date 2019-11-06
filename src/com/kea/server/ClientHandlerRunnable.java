@@ -31,7 +31,7 @@ class ClientHandlerRunnable implements Runnable {
         try (DataInputStream dataIn = new DataInputStream(clientSocket.getInputStream())) {
 
             String clientJoin = dataIn.readUTF();
-            if (clientJoin.startsWith(JOIN + " ")) {
+            if (clientJoin.startsWith(JOIN + " ")) { //evalueringen vil altid blive godkendt da clienten automatisk tilføjer "JOIN " til username
                 if (clientJoin.length() < 6 || clientJoin.length() > 17) {
                     dataOut.writeUTF(J_ER + " Username must be between 1 and 12 characters long");
                     return;

@@ -32,15 +32,12 @@ public class Server {
                 System.out.println("Waiting for new client connection...");
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Client connection accepted!");
-                try {
-                    ClientHandlerRunnable runnable = new ClientHandlerRunnable(clientSocket, this);
-                    if (joinedClients.size() < MAX_CLIENTS) {
-                        executorService.execute(runnable);
-                    } else {
-                        runnable.sendMessage(J_ER + " Client not accepted. Too many clients!");
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
+
+                ClientHandlerRunnable runnable = new ClientHandlerRunnable(clientSocket, this);
+                if (joinedClients.size() < MAX_CLIENTS) {
+                    executorService.execute(runnable);
+                } else {
+                    runnable.sendMessage(J_ER + " Client not accepted. Too many clients!");
                 }
             }
         } catch (IOException e) {
@@ -55,10 +52,10 @@ public class Server {
             for (ClientHandlerRunnable client : joinedClients) {
                 sb.append(client.getUserName()).append(" ");
             }
-            String message = sb.substring(0, sb.length() - 1);
+            String list = sb.substring(0, sb.length() - 1);
 
             for (ClientHandlerRunnable client : joinedClients) {
-                client.sendMessage(message);
+                client.sendMessage(list);
             }
         }
     }
@@ -66,6 +63,7 @@ public class Server {
     public void clientDisconnected(ClientHandlerRunnable clientHandlerRunnable) {
         synchronized (mutex) {
             joinedClients.remove(clientHandlerRunnable);
+            sendToAll("User: " + clientHandlerRunnable.getUserName() + " has disconnected from chat.");
         }
     }
 

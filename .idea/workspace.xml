@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e3338d-c440-48b6-91d7-3a72266ce538" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/kea/client/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/kea/client/Client$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/kea/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/kea/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/kea/common/SharedConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/kea/common/SharedConstants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/kea/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/kea/server/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kea/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kea/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kea/common/SharedConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kea/common/SharedConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kea/server/ClientHandlerRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kea/server/ClientHandlerRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kea/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kea/server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +147,7 @@
       <workItem from="1572444369093" duration="1295000" />
       <workItem from="1572445827574" duration="35082000" />
       <workItem from="1572615583587" duration="2472000" />
-      <workItem from="1573056811474" duration="5094000" />
+      <workItem from="1573056811474" duration="12465000" />
     </task>
     <servers />
   </component>

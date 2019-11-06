@@ -30,7 +30,7 @@ public class Client {
             String msgFromServer = reader.readUTF();
             if (msgFromServer.startsWith(J_OK + " ")) {
                 System.out.println(msgFromServer.substring(5));
-            } else {
+            } else if (msgFromServer.startsWith(J_ER + " ")) {
                 System.out.println(msgFromServer.substring(5));
                 return;
             }
