@@ -2,7 +2,7 @@ package com.kea.common;
 
 public class SharedConstants {
 
-    public static final int PORT = 9900;
+    public static final int PORT = 9999;
 
     public static final String JOIN = "JOIN";
 

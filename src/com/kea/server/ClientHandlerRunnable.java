@@ -1,7 +1,5 @@
 package com.kea.server;
 
-import com.kea.common.SharedConstants;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,7 +12,7 @@ class ClientHandlerRunnable implements Runnable {
     private Socket clientSocket;
     private Server server;
     private String userName;
-    DataOutputStream dataOut;
+    private DataOutputStream dataOut;
 
     public String getUserName() {
         return userName;
@@ -33,7 +31,7 @@ class ClientHandlerRunnable implements Runnable {
         try (DataInputStream dataIn = new DataInputStream(clientSocket.getInputStream())) {
 
             String clientJoin = dataIn.readUTF();
-            if (clientJoin.startsWith(SharedConstants.JOIN + " ")) {
+            if (clientJoin.startsWith(JOIN + " ")) {
                 if (clientJoin.length() < 6 || clientJoin.length() > 17) {
                     dataOut.writeUTF(J_ER + " Username must be between 1 and 12 characters long");
                     return;
